@@ -24,13 +24,7 @@ export default function Register() {
 
       console.log("Registered:", response.data);
     } catch (error: any) {
-      const response = error?.response?.data;
-
-      setErrors({
-        email: response?.errors?.email,
-        password: response?.errors?.password,
-        general: response?.message,
-      });
+      setErrors(error.response.data.errors);
     }
   };
 
