@@ -6,7 +6,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleRegister = async (event: FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError("");
     try {
@@ -21,8 +21,8 @@ export default function Login() {
     }
   };
   return (
-    <section className="login-card">
-      <form onSubmit={handleRegister}>
+    <section className="login-card ">
+      <form onSubmit={handleLogin}>
         <h1>Login</h1>
         <h2>Email</h2>
         <input
